@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vinnys Showcase Website</title>
+    
+    <style>
+        /* Overall page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #35a6d3;
+            color: #222;
+        }
+
+        /* Hero Section - Now uses background image */
+        .hero {
+            background-image: url('LEBRON.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Dark overlay so text is readable on any image */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.35); /* Adjust darkness if needed */
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            font-size: 4rem;
+            font-family: "Comic Sans MS", cursive;
+            font-weight: bold;
+            color: hsl(216, 100%, 59%);
+            text-shadow:
+                -2px -2px 0 #95fff6,
+                 2px -2px 0 #95fff6,
+                -2px  2px 0 #95fff6,
+                 2px  2px 0 #95fff6,
+                 6px  6px 12px rgba(0,0,0,0.3);
+            letter-spacing: 3px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .tab-button {
+            background: #42008d;
+            color: rgb(49, 0, 141);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab-button:hover {
+            background: #ffee00;
+        }
+
+        .tab-button.active {
+            background: #ff00ff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Topic Title */
+        .topic-title {
+            background: linear-gradient(to right, #ffd900, #9b8b00);
+            color: rgb(79, 0, 170);
+            text-align: center;
+            padding: 25px 0;
+            margin: 40px 0 20px 0;
+        }
+        
+        .topic-title h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Rest of your styles... */
+        .topic-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .topic-card {
+            background: rgba(202, 146, 255, 1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 128, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 102, 204, 0.25);
+        }
+        
+        .topic-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        
+        .topic-card-text {
+            text-align: center;
+            padding: 18px;
+            margin: 0;
+            background: #fcff68;
+            color: #003366;
+            font-size: 1.4rem;
+        }
+
+        .footer {
+            background: #6f00ff;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The Hero Section -->
+    <section class="hero">
+        <div class="hero-text">Vinnys Showcase Website</div>
+    </section>
+
+    <!-- Topic One -->
+    <section class="topic">
+        <div class="topic-title">
+            <h1>My Images</h1>
+        </div>
+        
+        <div class="topic-content">
+            <div class="topic-card">
+                <img src="images/THE_DUD (2).png" alt="THE_DUD">
+                <h2 class="topic-card-text">The Dud</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/Planets.png" alt="Planets">
+                <h2 class="topic-card-text">My Planet</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/drawing.png" alt="Snowflakes">
+                <h2 class="topic-card-text">Snowflakes</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/Snow.PNG" alt="Snow family">
+                <h2 class="topic-card-text">Snow Family</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/Greenstone.PNG" alt="Greenstone">
+                <h2 class="topic-card-text">Greenstone</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/Dragon.png" alt="Hex Dragon">
+                <h2 class="topic-card-text">Hex Dragon</h2>
+            </div>
+            <div class="topic-card">
+                <img src="images/Spongebob.PNG" alt="Spongebob">
+                <h2 class="topic-card-text">Spongebob</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Showcase Website By Vinny</p>
+    </footer>
+
+</body>
+</html>
